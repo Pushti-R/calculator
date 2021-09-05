@@ -1,120 +1,149 @@
-body{
-	font-family: 'Open Sans',sans-serif;
-	background-color:bisque;
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: black;
 }
-h3{
-    color:black;
-	animation-name: colorchng;
-    animation-duration: 10s;
-	animation-iteration-count:infinite;
-
+h3 {
+  color: black;
+  animation-name: colorchng;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
 }
 @keyframes colorchng {
-	0%   {color:black;}
-	20%  {color:orange;}
-	40%  {color: blue;}
-	60% {color: red;}
-	80% {color: #20b2aa;}
-	100% {color:white;}
-
+  0% {
+    color: black;
   }
-.container{
-	width: 100%;
-	height: 100%;
-	margin: 0;	
+  20% {
+    color: yellow;
+  }
+  40% {
+    color: skyblue;
+  }
+  60% {
+    color: pink;
+  }
+  80% {
+    color: paleturquoise;
+  }
+  100% {
+    color: white;
+  }
 }
-#calculator{
-	width: 320px;
-	height: 520px;
-	background-color: #ffffff;
-	margin: 0 auto;
-	top: 50px;
-	position: relative;
-	border-radius: 5px;
-	box-shadow: 0 4px 8px 0  black;
+.container {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
-#result{
-	height: 120px;
+#calculator {
+  width: 320px;
+  max-height: 520px;
+  background-color: floralwhite;
+  margin: 0 auto;
+  top: 50px;
+  position: relative;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px 0 white;
 }
-#history{
-	text-align: right;
-	height: 20px;
-	margin: 0 20px;
-	padding-top: 20px;
-	font-size: 15px;
-	color: black;
+#result {
+  height: 120px;
 }
-#output{
-	text-align: right;
-	height: 60px;
-	margin: 10px 20px;
-	font-size: 30px;
+#history {
+  text-align: right;
+  height: 20px;
+  margin: 0 20px;
+  padding-top: 20px;
+  font-size: 20px;
+  color: black;
 }
-.keyboard{
-	height: 600px;
+#output {
+  text-align: right;
+  height: 60px;
+  margin: 10px 20px;
+  font-size: 30px;
 }
-.operator, .number{
-	width: 50px;
-	height: 50px;
-	margin: 15px;
-	float: left;
-	border-radius: 50%;
-	border-width: 0;
-	font-weight: bold;
-	font-size: 15px;
+#keyboard {
+  height: 420px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-template-rows: auto auto;
+  align-content: center;
+  margin-top: 40px;
+  background-color: peachpuff;
+  border-radius: 20px;
 }
-.number{
-	background-color: #888b8d59;
+.operator,
+.number {
+  width: 50px;
+  height: 50px;
+  margin: 15px;
+  float: left;
+  border-radius: 50%;
+  border-width: 0;
+  font-weight: bold;
+  font-size: 15px;
 }
-.number, .operator{
-	cursor: pointer;
+.number {
+  background-color: lightslategrey;
 }
-.operator:active, .number:active{
-	font-size: 13px;
+.number,
+.operator {
+  cursor: pointer;
 }
-.operator:focus, .number:focus, .empty:focus{
-	outline: 0;
+.operator:active,
+.number:active {
+  font-size: 13px;
 }
-button:nth-child(3){
-	font-size: 20px;
-	background-color: #f50691;
+.operator:focus,
+.number:focus,
+.empty:focus {
+  outline: 0;
 }
-button:nth-child(4){
-	font-size: 20px;
-	background-color: #20b2aa;
+button:nth-child(3) {
+  font-size: 20px;
+  background-color: lightcoral;
 }
-button:nth-child(8){
-	font-size: 20px;
-	background-color: #ffa500;
+button:nth-child(4) {
+  font-size: 20px;
+  background-color: paleturquoise;
 }
-button:nth-child(12){
-	font-size: 20px;
-	background-color: #f08080;
+button:nth-child(8) {
+  font-size: 20px;
+  background-color: yellowgreen;
 }
-button:nth-child(16){
-	font-size: 20px;
-	background-color: #7d93e0;
+button:nth-child(12) {
+  font-size: 20px;
+  background-color: #f08080;
 }
-button:nth-child(19){
-	font-size: 20px;
-	background-color:#888b8d59;
+button:nth-child(16) {
+  font-size: 20px;
+  background-color: darkgreen;
 }
-button:nth-child(20){
-	font-size: 20px;
-	background-color: #9477af;
+button:nth-child(19) {
+  font-size: 20px;
+  background-color: yellowgreen;
+}
+button:nth-child(20) {
+  font-size: 20px;
+  background-color: #9477af;
 }
 
-
-@media(max-width: 450px) {
-    #calculator {
-        width:80%;
-        height: 80%;
-    }
+@media only screen and (max-width: 450px) {
+  #calculator {
+    width: 80%;
+    height: 80%;
+  }
+  .operator,
+  .number {
+    margin: 8px;
+  }
 }
 
-@media(max-width: 333px) {
-    #calculator {
-        width:100%;
-        height: 100%;
-    }
+@media only screen and (max-width: 333px) {
+  #calculator {
+    width: 100%;
+    max-height: 100%;
+  }
+  .operator,
+  .number {
+    margin: 8px;
+  }
 }
